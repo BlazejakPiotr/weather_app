@@ -2,18 +2,17 @@ import {createSlice} from '@reduxjs/toolkit';
 import {CityDetailsType} from './apiSlice';
 
 export type UserSliceType = {
-  cities: CityDetailsType[];
+  cities: CityDetailsType;
   loading: boolean;
   error: boolean;
 };
 
 const initialState: UserSliceType = {
-  cities: [
-    {
-      Key: '276594',
-      EnglishName: 'Poznan',
-    },
-  ],
+  cities: {
+    Key: '276594',
+    EnglishName: 'Poznan',
+  },
+
   loading: false,
   error: false,
 };
